@@ -1,0 +1,71 @@
+<!-- kiểu dữ liệu html -->
+<!DOCTYPE HTML>
+<!-- 1 file chỉ có 1 thẻ -->
+<html>
+  <!-- phần đầu -->
+  <head>
+    <!-- tiêu đề trang -->
+    <title>HCodeHub</title>
+    <!-- hỗ trợ tiếng việt -->
+    <meta charset = "utf-8">
+    <!-- Internal -->
+    <style>
+      /* tag-1 + #id-100 + .class-10 = 111 điểm ưu tiên*/
+      h1#heading-id.heading-class {
+        color: red;
+      }
+      /* Equal specificirty - nếu giống nhau, mới hơn thì được áp dụng */
+      #heading-id {
+        color: violet;
+      }
+      /* .class-10 */
+      .heading-class {
+        color: yellow;
+      }
+      /* tag-1 */
+      h1 {
+        color: green;
+      }
+    </style>
+    <!-- External -->
+    <link rel = "stylesheet" href = "style.css">
+  </head>
+  <!-- phần thân -->
+  <body>
+    <!-- khối bao quanh -->
+    <div>
+      <!-- tiêu đề -->
+      <!-- !important - độ ưu tiên > 1000 và !important CSS -->
+      <!-- style = "color:red;" - Inline -->
+      <h1 style = "color:red !important;" id = "heading-id" class = "heading-class">Priority?</h1>
+      <!-- danh sách dạng số -->
+      <ol>
+        <!-- item -->
+        <li>Internal, External?</li>
+        <li>Inline - 1000</li>
+        <li>#id - 100</li>
+        <li>.class - 10</li>
+        <li>tag - 1</li>
+        <li>Equal specificity?</li>
+        <li>Universal selector and inherited?</li>
+      </ol>
+    </div>
+  </body>
+</html>
+
+<!--
+External - bên ngoài.
+Internal - bên trong.
+Giữa External và Internal không có độ ưu tiên, cái nào mới hơn thì được áp dụng.
+
+Equal specificity - nếu độ ưu tiên giống nhau thì, cái nào mới hơn sẽ được áp dụng.
+
+!important - độ ưu tiên > 1000 điểm.
+Universal selector - 0 điểm.
+Inherited - 0 điểm.
+
+Inline - độ ưu tiên 1000 điểm.
+#id - độ ưu tiên 100 điểm.
+.class - độ ưu tiên 10 điểm.
+tag(thẻ) - độ ưu tiên 1 điểm.
+-->

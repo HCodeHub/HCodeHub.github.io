@@ -1,0 +1,23 @@
+/* Universal selector */
+* {
+  //color: red;
+}
+
+/* Inherited */
+html {
+  color: yellow;
+}
+
+/* !important - độ ưu tiên > 1000 */
+li {
+  color: red !important;
+}
+
+li {
+  color: violet;
+}
+
+/* !important - độ ưu tiên > 1000 */
+h1 {
+  color: green !important;
+}
